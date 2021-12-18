@@ -195,7 +195,9 @@ if __name__ == "__main__":
             config.group_size = 1
 
     # dataset
-    train_dataset_path = '/data/lql/mscode/data/ILSVRC2012/train'
+    #train_dataset_path = '/data/lql/mscode/data/ILSVRC2012/train'
+    train_dataset_path = '/home/mindspore/dataset/imagenet_original/train'
+
     # dataset = create_dataset(dataset_path=config.data_path, do_train=True, repeat_num=1,
     #                          batch_size=64, train_image_size=config.train_image_size,
     #                          eval_image_size=config.eval_image_size, target="GPU",
@@ -273,7 +275,8 @@ if __name__ == "__main__":
     if args.run_eval:
         # if config.root is None or not os.path.isdir(config.root):
         #     raise ValueError("{} is not a existing path.".format(config.root))
-        path = '/data/lql/mscode/data/ILSVRC2012/val'
+        #path = '/data/lql/mscode/data/ILSVRC2012/val'
+        path = '/home/mindspore/dataset/imagenet_original/val'
         eval_dataset = create_dataset(path, do_train=False, repeat_num=1,
                                  batch_size=64, train_image_size=224,
                                  eval_image_size=224, target="GPU",
